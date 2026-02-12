@@ -1,0 +1,16 @@
+  /* Status de eventos na lista */
+  .status-ativo { background-color: #007bff; color: #fff; }
+  .status-cancelado { background-color: #dc3545; color: #fff; }
+  .status-finalizado { background-color: #6c757d; color: #000; }
+  .status-em-andamento { background-color: #28a745; color: #fff; animation: piscar 1s infinite; }
+
+  @keyframes piscar {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.4; }
+  }
+
+  /* FullCalendar custom colors */
+  .fc-event-ativo { background-color: #007bff; color: #fff; }
+  .fc-event-cancelado { background-color: #dc3545; color: #fff; }
+  .fc-event-finalizado { background-color: #6c757d; color: #000; }
+  .fc-event-em-andamento { background-color: #28a745; color: #fff; animation: piscar 1s infinite; }

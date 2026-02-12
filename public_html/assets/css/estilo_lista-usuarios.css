@@ -1,0 +1,132 @@
+  /* Estilo para a imagem circular */
+  .user-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+  }
+
+  /* Alinhamento da célula da imagem */
+  .user-photo-cell {
+    text-align: center;
+    vertical-align: middle !important;
+  }
+
+  /* Container da busca + botão Cadastrar */
+  .search-register-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .search-box {
+    position: relative;
+    flex-grow: 1;
+    max-width: 1060px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 8px 38px 8px 36px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+  }
+  .search-box input:focus {
+    outline: none;
+    border-color: #0069d9;
+    box-shadow: 0 0 8px rgba(0, 105, 217, 0.5);
+  }
+  .search-box .fa-search {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    font-size: 16px;
+  }
+
+  /* Botão Cadastrar */
+  #btnCadastrar {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.25s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  #btnCadastrar:hover {
+    background-color: #218838;
+    color: white;
+  }
+
+  /* Estilo DataTables */
+  div.dt-buttons {
+    margin-bottom: 16px;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  #usuariosTable {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    border-collapse: separate !important;
+    border-spacing: 0 8px !important;
+    width: 100% !important;
+  }
+  #usuariosTable thead th {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    text-align: left;
+  }
+  #usuariosTable tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    border-radius: 6px;
+  }
+  #usuariosTable tbody tr:hover {
+    background-color: #e2e6ea;
+  }
+  #usuariosTable tbody td {
+    border: none !important;
+    padding: 12px 15px;
+  }
+  .dt-button {
+    background-color: #0069d9 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 8px 14px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 3px 8px rgba(0, 105, 217, 0.3);
+    transition: background-color 0.25s ease;
+    margin-right: 8px !important;
+  }
+  .dt-button:hover {
+    background-color: #0053ba !important;
+    color: #fff !important;
+  }
+
+  /* 🔹 Linha de usuário inativo */
+  .usuario-inativo {
+      background-color: #f5c6cb !important; /* vermelho claro */
+      color: #721c24 !important;           /* texto mais escuro para contraste */
+  }
+
+  .usuario-inativo:hover {
+      background-color: #f1b0b7 !important; /* vermelho claro ao passar o mouse */
+  }

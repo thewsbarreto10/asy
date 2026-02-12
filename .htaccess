@@ -1,0 +1,2 @@
+# Impede acesso direto à pasta app
+RedirectMatch 403 ^/app/

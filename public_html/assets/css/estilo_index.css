@@ -1,0 +1,102 @@
+body {
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #e6edf3;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  background: #161b22;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* LOGO */
+.login-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-image img {
+  max-width: 100%;
+  max-height: 80px;    /* controla altura sem distorcer */
+  width: auto;          /* mantém proporção */
+  height: auto;
+  object-fit: contain;  /* garante que não corte */
+  filter: brightness(0.9);
+}
+
+/* FORMULÁRIO */
+.form-group { position: relative; margin-bottom: 1.5rem; }
+
+.form-control {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  border-radius: 12px;
+  height: 45px;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 0.2rem rgba(88, 166, 255, 0.25);
+}
+
+/* HINT (flutua abaixo sem afetar layout) */
+.hint-text {
+  position: absolute;
+  left: 0.8rem;
+  bottom: -1.1rem;
+  font-size: 0.8rem;
+  color: rgba(230, 237, 243, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(-2px);
+}
+
+.form-group.active .hint-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-control::placeholder { color: rgba(230, 237, 243, 0.4); }
+
+.icon-left, .icon-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(139, 148, 158, 0.5);
+  font-size: 0.9rem;
+}
+
+.icon-left { left: 0.7rem; }
+.icon-right { right: 0.7rem; cursor: pointer; }
+
+.btn-primary {
+  background-color: #1f6feb;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover { background-color: #0b2c68ff; }
+.btn-primary:active { background-color: #174db3; transform: scale(0.98); }
+
+@media (max-width: 576px) {
+  .login-container { margin: 1rem; padding: 1.5rem; }
+
+  .login-image img {
+    max-height: 100px; /* reduz altura no mobile */
+  }
+}

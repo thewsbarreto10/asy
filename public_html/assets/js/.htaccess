@@ -1,0 +1,37 @@
+#########################################
+# SEGURANÇA DO SERVIDOR
+#########################################
+
+# Desativa listagem de diretórios
+Options -Indexes
+
+#########################################
+# PROTEÇÃO DE ARQUIVOS SENSÍVEIS
+#########################################
+
+# Bloqueia acesso ao próprio .htaccess
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Bloqueia arquivos que nunca devem ser acessados
+<FilesMatch "(^\.|composer\.json|composer\.lock|package\.json|package-lock\.json|README\.md|phpunit\.xml|env|\.env)">
+    Require all denied
+</FilesMatch>
+
+#########################################
+# PROTEÇÃO DE PASTAS INTERNAS
+#########################################
+
+RewriteEngine On
+
+# Bloqueia pastas internas do sistema
+RewriteRule ^(app|core|config|private|vendor|storage)/ - [F,L]
+
+#########################################
+# PERMISSÃO PARA EXECUTAR PHP NAS PÁGINAS
+#########################################
+
+<FilesMatch "\.js$">
+    Require all granted
+</FilesMatch>
