@@ -27,8 +27,15 @@ define('PROXY_PATH', PUBLIC_PATH . '/proxy');
 // ================================================
 
 // Detecta automaticamente o host e protocolo
-$protocolo = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+
+$https = (
+    (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+    (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+);
+
+$protocolo = $https ? 'https' : 'http';
+
 
 // Como o Apache está configurado com Alias /asy -> public_html
 define('BASE_URL', "{$protocolo}://{$host}");
