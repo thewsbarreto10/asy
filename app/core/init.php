@@ -31,9 +31,9 @@ $protocolo = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https
 $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
 
 // Como o Apache está configurado com Alias /asy -> public_html
-define('BASE_URL', "{$protocolo}://{$host}/asy"); // ex: http://srv880732.hstgr.cloud/asy
-define('PUBLIC_URL', BASE_URL);                    // PUBLIC_PATH já é público
-define('ASSETS_URL', PUBLIC_URL . '/assets');    // pasta de assets
+define('BASE_URL', "{$protocolo}://{$host}");
+define('PUBLIC_URL', BASE_URL);
+define('ASSETS_URL', BASE_URL . '/assets');
 define('PAGES_URL', BASE_URL . '/pages');
 define('ADMIN_URL', PAGES_URL . '/admin');
 define('ASYEAD_URL', PAGES_URL . '/asy-ead');
