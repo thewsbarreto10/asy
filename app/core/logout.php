@@ -29,6 +29,6 @@ $_SESSION = [];
 session_destroy();
 
 // Redireciona para a tela de login
-header("Location: /asy/?logout=1");
+header("Location: ?logout=1");
 
 exit;
