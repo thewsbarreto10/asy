@@ -1,6 +1,6 @@
 <?php
 return [
-    'host' => 'localhost',
+    'host' => 'asy_mysql',
     'db'   => 'asychurch',
     'user' => 'asychurch',
     'pass' => 'Asy@2025',
