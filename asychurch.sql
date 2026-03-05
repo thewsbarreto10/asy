@@ -64,7 +64,7 @@ CREATE TABLE `asy_eventos` (
   `idResponsavel` int DEFAULT NULL,
   `dataCriacao` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `statusEvento` enum('ativo','cancelado','finalizado','em andamento') DEFAULT 'ativo'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `asy_eventos`
