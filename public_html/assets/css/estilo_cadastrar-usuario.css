@@ -1,0 +1,133 @@
+body {
+  background: #0d1117;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente apenas */
+  align-items: flex-start; /* Mantém o conteúdo começando do topo */
+  min-height: 100vh; /* Permite rolagem */
+  color: #e6edf3;
+  overflow-y: auto; /* Adiciona scroll se necessário */
+  padding: 2rem 0; /* Dá respiro acima e abaixo */
+}
+
+
+/* CONTAINER PRINCIPAL */
+.login-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #161b22;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  margin: 2rem;
+}
+
+/* LOGO */
+.login-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-image img {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0.9);
+}
+
+/* FORMULÁRIO */
+.form-group {
+  position: relative;
+  margin-bottom: 0.7rem;
+}
+
+.form-control {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  border-radius: 12px;
+  height: 45px;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 0.2rem rgba(88, 166, 255, 0.25);
+}
+
+.form-control::placeholder {
+  color: rgba(230, 237, 243, 0.4);
+}
+
+/* HINT (flutua abaixo sem afetar layout) */
+.hint-text {
+  position: absolute;
+  left: 0.8rem;
+  bottom: -1.1rem;
+  font-size: 0.8rem;
+  color: rgba(230, 237, 243, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(-2px);
+}
+
+.form-group.active .hint-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ÍCONES — corrigido alinhamento */
+.icon-left,
+.icon-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(139, 148, 158, 0.5);
+  font-size: 0.9rem;
+  line-height: 1; /* corrige micro desalinhamento */
+  z-index: 2;
+}
+
+.icon-left {
+  left: 0.7rem;
+}
+
+.icon-right {
+  right: 0.7rem;
+  cursor: pointer;
+}
+
+/* BOTÃO */
+.btn-primary {
+  background-color: #1f6feb;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0b2c68ff;
+}
+
+.btn-primary:active {
+  background-color: #174db3;
+  transform: scale(0.98);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 95%;
+    padding: 1.5rem;
+  }
+
+  .login-image img {
+    max-height: 100px;
+  }
+}

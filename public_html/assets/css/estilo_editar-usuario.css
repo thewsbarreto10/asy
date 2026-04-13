@@ -1,0 +1,16 @@
+  /* HINT (flutua abaixo sem afetar layout) */
+  .hint-text {
+    position: absolute;
+    left: 0.8rem;
+    bottom: -1.1rem;
+    font-size: 0.8rem;
+    color: rgba(230, 237, 243, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateY(-2px);
+  }
+  .form-group.active .hint-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
