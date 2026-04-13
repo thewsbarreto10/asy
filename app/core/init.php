@@ -1,5 +1,11 @@
 <?php
 
+require_once BASE_PATH . '/vendor/autoload.php';
+
+if (!class_exists(\Delight\Auth\Auth::class)) {
+    die('Auth NÃO carregado');
+}
+
 session_set_cookie_params([
     'lifetime' => 0,
     'path' => '/',
@@ -111,9 +117,7 @@ try {
 
 require_once BASE_PATH . '/vendor/autoload.php';
 
-use Delight\Auth\Auth;
-
-$auth = new Auth($pdo);
+$auth = new \Delight\Auth\Auth($pdo);
 
 $GLOBALS['auth'] = $auth;
 
