@@ -1,7 +1,5 @@
 <?php
 
-require_once BASE_PATH . '/vendor/autoload.php';
-
 if (!class_exists(\Delight\Auth\Auth::class)) {
     die('Auth NÃO carregado');
 }
@@ -65,6 +63,7 @@ define('PROXY_URL', BASE_URL . '/proxy');
 // ================================================
 $config = require CONFIG_PATH;
 
+require_once BASE_PATH . '/vendor/autoload.php';
 
 // ================================================
 // SEGURANÇA
