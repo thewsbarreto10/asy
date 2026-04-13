@@ -77,6 +77,11 @@
     </div>
 
     <!-- JS personalizado -->
+    <script>
+      const PROXY_URL = "<?= PROXY_URL ?>";
+      const CSRF_TOKEN = "<?= $_SESSION['csrf_token'] ?>";
+    </script>
+
     <script src="<?= ASSETS_URL ?>/js/config.js"></script>
 
     <script src="<?= ASSETS_URL ?>/js/script_index.js?v=<?= time() ?>"></script>
